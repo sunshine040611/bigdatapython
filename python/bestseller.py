@@ -10,8 +10,8 @@ response = requests.get(url, headers=headers)
 soup = BeautifulSoup(response.text, 'html.parser')
 
 # 책 제목 정보 추출
-books = soup.select('ol > li > div > div > div.info > a.gd_name')[:10]
+book_list = soup.find_all('a', class_='gd_name', limit=10)
 
 # 각 책 제목 출력
-for i, book in enumerate(books, 1):
-    print(f"{i}. {book.text.strip()}")
+for i, book in enumerate(book_list, 1):
+    print(f"{i}. {book.get_text(strip=True)}")
