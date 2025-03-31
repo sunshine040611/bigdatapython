@@ -19,3 +19,19 @@ artists = soup.select('div.ellipsis.rank02 a')
 # 결과 출력
 for idx, (song, artist) in enumerate(zip(songs, artists), 1):
     print(f"{idx}. {song.text} - {artist.text}")
+
+
+import random
+import time
+for song in songs:
+    print(song)
+
+print ("AI야 노래 한곡만 추천해줘")
+print ("알겠습니다.")
+# 멜론 차트 100중에서 노래 한 곡 추천해주는 서비스 만들기기
+ai_song = random.choice(songs)
+dd=["두","두","두둥"]
+for d in dd:
+    print(d)
+    time.sleep(1)
+print (f"제가 추천한 곡은 {ai_song}입니다.")
