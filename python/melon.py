@@ -28,7 +28,7 @@ for song in songs:
 
 print ("AI야 노래 한곡만 추천해줘")
 print ("알겠습니다.")
-# 멜론 차트 100중에서 노래 한 곡 추천해주는 서비스 만들기기
+# 멜론 차트 100중에서 노래 한 곡 추천해주는 서비스 만들기
 ai_song = random.choice(songs)
 dd=["두","두","두둥"]
 for d in dd:
